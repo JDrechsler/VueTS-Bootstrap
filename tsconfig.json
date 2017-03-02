@@ -1,0 +1,23 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "noEmitOnError": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "skipLibCheck": true,
+        "suppressImplicitAnyIndexErrors": false,
+        "charset": "utf8",
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.Promise"
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' />
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container" id="vue-app">
+		<!--<pre>{{$data}}</pre>-->
+
+		<h2>{{title}}</h2>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<form v-on:submit.prevent="addItem(newItem)">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Add item here" v-model="newItem.text">
+					</div>
+
+					<div class="form-group">
+						<button class="btn btn-success">Add</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				<ul class="list-group">
+					<li class="list-group-item" v-for="(item, index) in items">
+						{{item.text}}
+						<button class="btn btn-warning btn-xs pull-left margin-right-10" @click="deleteItem(index)">X</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js'></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>
